@@ -4,7 +4,6 @@ library(dplyr)
 
 getwd()
 prebeh <- read.csv("DMP_pretx_demo_tasks_full_12.15.15.csv", sep = ",", header = TRUE)
-prebeh
 describe(prebeh)
 glimpse(prebeh)
 str(prebeh)
@@ -24,8 +23,10 @@ prebeh <- prebeh %>% select(one_of(columns))
 
 #remove cognitive outliers
 prebeh <- prebeh %>% filter(cog_outlier_pretx==0)
-#relevel income so it's in the right order
+#relevel income, education so they're in the right order
 prebeh$income <- factor(prebeh$income, levels=c("<$20,000", "$20,000-35,000", "$35,001-50,000", "$50,001-75,000", ">$75,000"))
+prebeh$edu <- factor(prebeh$edu, levels=c("Grade school", "Some high school", "HS grad or GED", 
+                                             "Some coll or technical school", "College grad or beyond"))
 summary(prebeh)
 plot(prebeh$income)
 
@@ -33,12 +34,29 @@ plot(prebeh$income)
 hist(prebeh$income, breaks = 6)
 #look at whether IQ varies by income, have to transform to numeric first
 prebeh$income <- as.numeric(prebeh$income)
-test <- lm(sst_ssrt_pretx~income, prebeh)
+test <- lm(shipley~incomebin, prebeh)
 summary(test)
+
 
 #look at all variables by income
 t <- prebeh %>% group_by(income) %>% summarise_each(funs(mean))
 View(t)
+#look at correlation table (convert income and edu to numeric first)
+prebeh$income <- as.numeric(prebeh$income)
+prebeh$edu <- as.numeric(prebeh$edu)
+table(prebeh$income)
+cor(prebeh[sapply(prebeh, is.numeric)], use="complete.obs")
+
+#recode income to above/below 20,000
+prebeh$incomebin <- ifelse(prebeh$income == "<$20,000",0, 1)
+#look at race and income crosstabs
+table <- table(prebeh$income, prebeh$race)
+prop.table(table,1)
+chisq.test(table)
+fisher.test(table)
+#look at crosstabs by education
+table <- table(prebeh$edu, prebeh$race)
+table
 
 #correlation
 cor(prebeh$income, prebeh$shipley)
