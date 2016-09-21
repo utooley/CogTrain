@@ -15,7 +15,7 @@ columns=c("DMP_ID", "sex", "race", "race_oth", "ethnicity",
          "edu", "employ", "income","cog_outlier_pretx", "marital", "shipley",
          "treatment", "bt_ach_tot", "bt_adh_pc", "bmi", 
          "bmi25", "cpt_tp_ct_pretx",  "cpt_tp_mn_pretx",
-         "csh_cost_mn_pretx", "csh_cost_md_pretx", "sst_ssrt_pretx",
+         "csh_cost_md_pretx", "sst_ssrt_pretx",
          "str_stroop_mn_pretx", "str_stroop_md_pretx", "vnb_tp_ct_0_pretx", 
          "vnb_tp_ct_1_pretx", "vnb_tp_ct_2_pretx", "vnb_tp_ct_3_pretx", "vnb_tp_md_0_pretx",
          "vnb_tp_md_1_pretx", "vnb_tp_md_2_pretx", "vnb_tp_md_3_pretx")
@@ -34,7 +34,7 @@ plot(prebeh$income)
 hist(prebeh$income, breaks = 6)
 #look at whether IQ varies by income, have to transform to numeric first
 prebeh$income <- as.numeric(prebeh$income)
-test <- lm(shipley~incomebin, prebeh)
+test <- lm(sst_ssrt_pretx~income, prebeh)
 summary(test)
 
 
@@ -51,6 +51,7 @@ cor(prebeh[sapply(prebeh, is.numeric)], use="complete.obs")
 prebeh$incomebin <- ifelse(prebeh$income == "<$20,000",0, 1)
 #look at race and income crosstabs
 table <- table(prebeh$income, prebeh$race)
+write.csv(table, "raceandincome.csv")
 prop.table(table,1)
 chisq.test(table)
 fisher.test(table)
