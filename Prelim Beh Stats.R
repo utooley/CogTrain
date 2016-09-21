@@ -11,12 +11,12 @@ summary(prebeh)
 colnames(prebeh)
 
 #keep only ones of interest
-columns=c("DMP_ID", "sex", "race", "race_oth", "ethnicity",
+columns=c("DMP_ID", "sex", "age", "race", "race_oth", "ethnicity",
          "edu", "employ", "income","cog_outlier_pretx", "marital", "shipley",
          "treatment", "bt_ach_tot", "bt_adh_pc", "bmi", 
          "bmi25", "cpt_tp_ct_pretx",  "cpt_tp_mn_pretx",
          "csh_cost_md_pretx", "sst_ssrt_pretx",
-         "str_stroop_mn_pretx", "str_stroop_md_pretx", "vnb_tp_ct_0_pretx", 
+         "str_stroop_mn_pretx", "str_stroop_md_pretx", "vnb_tp_ct_0_pretx", "vnb_tp_ct_all_pretx",
          "vnb_tp_ct_1_pretx", "vnb_tp_ct_2_pretx", "vnb_tp_ct_3_pretx", "vnb_tp_md_0_pretx",
          "vnb_tp_md_1_pretx", "vnb_tp_md_2_pretx", "vnb_tp_md_3_pretx")
 prebeh <- prebeh %>% select(one_of(columns))
@@ -40,6 +40,9 @@ summary(test)
 
 #look at all variables by income
 t <- prebeh %>% group_by(income) %>% summarise_each(funs(mean))
+View(t)
+#look at all variables by incomebin
+t <- prebeh %>% group_by(incomebin) %>% summarise_each(funs(mean))
 View(t)
 #look at correlation table (convert income and edu to numeric first)
 prebeh$income <- as.numeric(prebeh$income)
