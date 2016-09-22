@@ -16,7 +16,7 @@ columns=c("DMP_ID", "sex", "race", "race_oth", "ethnicity",
          "treatment", "bt_ach_tot", "bt_adh_pc", "bmi", 
          "bmi25", "cpt_tp_ct_pretx",  "cpt_tp_mn_pretx",
          "csh_cost_md_pretx", "sst_ssrt_pretx",
-         "str_stroop_mn_pretx", "str_stroop_md_pretx", "vnb_tp_ct_0_pretx", 
+         "str_stroop_mn_pretx", "str_stroop_md_pretx", "vnb_tp_ct_all_pretx", "vnb_tp_ct_0_pretx", 
          "vnb_tp_ct_1_pretx", "vnb_tp_ct_2_pretx", "vnb_tp_ct_3_pretx", "vnb_tp_md_0_pretx",
          "vnb_tp_md_1_pretx", "vnb_tp_md_2_pretx", "vnb_tp_md_3_pretx")
 prebeh <- prebeh %>% select(one_of(columns))
