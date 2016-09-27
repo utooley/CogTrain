@@ -29,9 +29,12 @@ efcols1=c("cpt_dprime_pretx",
 efcols2=c("cpt_tp_ct_pretx", 
           "csh_cost_md_pretx", "sst_ssrt_pretx",
           "str_stroop_md_pretx", "vnb_tp_ct_all_pretx")
-eftasks <- select(prebeh, one_of(efcols1))
+efcols3=c("cpt_tp_ct_pretx", 
+          "csh_cost_md_pretx", "sst_ssrt_pretx",
+          "str_stroop_md_pretx", "vnb_tp_md_slope")
+eftasks <- select(prebeh, one_of(efcols3))
 eftaskscor <- cor(eftasks)
-View(eftaskscov)
+View(eftaskscor)
 
 #determining number of components to extract
 library(nFactors)
@@ -42,12 +45,25 @@ nS <- nScree(x=ev$values, aparallel=ap$eigen$qevpea)
 plotnScree(nS)
 summary(nS)
 
+
 #EFA with maximum likelihood factor analysis
-fit <- factanal(eftasks, 2, rotation = "varimax")
+fit <- factanal(eftasks, 2, rotation ="varimax")
 print(fit, digits=2, cutoff=.3, sort=TRUE)
 load <- fit$loadings[,1:2] 
 plot(load,type="n") # set up plot 
 text(load,labels=names(eftasks),cex=.7) # add variable names
+
+#EFA using minimum residual (can also change to do principal axes)
+fit <- fa(eftasks, nfactors=2, rotate = "oblimin", fm = "minres")
+print(fit, digits = 2)
+
+#Varimax rotated PCA or using oblimin
+library(GPArotation)
+fit <- principal(eftasks, nfactors=3, rotate="varimax")
+fit
+fit <- principal(eftasks, nfactors=2, rotate="oblimin")
+fit
+
 
 #CFA according to Miyake's tasks loading model (but only have one domain in which more than 1 task
 #can't really do)
@@ -64,7 +80,6 @@ fit <- cfa(miyake.model, data=eftasks)
 # display summary output
 summary(fit, fit.measures=TRUE)
 
-#PCA using oblimin
 
 
 
