@@ -3,7 +3,7 @@ library(dplyr)
 #import behavioral data
 
 getwd()
-prebeh <- read.csv("DMP_pretx_demo_tasks_full_12.15.15.csv", sep = ",", header = TRUE)
+prebeh <- read.csv("DMP_pretx_demo_tasks_withnewvars_12.15.15.csv", sep = ",", header = TRUE)
 describe(prebeh)
 glimpse(prebeh)
 str(prebeh)
@@ -14,15 +14,10 @@ colnames(prebeh)
 columns=c("DMP_ID", "sex", "age", "race", "race_oth", "ethnicity",
          "edu", "employ", "income","cog_outlier_pretx", "marital", "shipley",
          "treatment", "bt_ach_tot", "bt_adh_pc", "bmi", 
-         "bmi25", "cpt_tp_ct_pretx",  "cpt_tp_mn_pretx",
+         "bmi25", "cpt_tp_ct_pretx",  "cpt_dprime_pretx", 
          "csh_cost_md_pretx", "sst_ssrt_pretx",
-<<<<<<< ours
-         "str_stroop_mn_pretx", "str_stroop_md_pretx", "vnb_tp_ct_all_pretx", "vnb_tp_ct_0_pretx", 
-=======
-         "str_stroop_mn_pretx", "str_stroop_md_pretx", "vnb_tp_ct_0_pretx", "vnb_tp_ct_all_pretx",
->>>>>>> theirs
-         "vnb_tp_ct_1_pretx", "vnb_tp_ct_2_pretx", "vnb_tp_ct_3_pretx", "vnb_tp_md_0_pretx",
-         "vnb_tp_md_1_pretx", "vnb_tp_md_2_pretx", "vnb_tp_md_3_pretx")
+         "str_stroop_md_pretx", "vnb_tp_ct_all_pretx",
+         "vnb_tp_ct_slope", "vnb_tp_md_slope")
 prebeh <- prebeh %>% select(one_of(columns))
 
 #remove cognitive outliers
