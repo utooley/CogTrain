@@ -35,7 +35,7 @@ efcols3=c("cpt_tp_ct_pretx",
 efcolsall=c("cpt_tp_ct_pretx", "cpt_dprime_pretx", 
             "csh_cost_md_pretx", "sst_ssrt_pretx",
             "str_stroop_md_pretx", "vnb_tp_md_slope", "vnb_tp_ct_all_pretx")
-eftasks <- select(prebeh, one_of(efcols2))
+eftasks <- select(prebeh, one_of(efcols3))
 eftaskscor <- cor(eftasks)
 cor.test(eftasks$sst_ssrt_pretx, eftasks$str_stroop_md_pretx)
 View(round(eftaskscor, 2))
@@ -88,7 +88,7 @@ summary(fit, fit.measures=TRUE)
 cortest.bartlett(eftasks)
 #Bartlett's test significant, good
 KMO(eftasks)
-#CSH is worrisome, KMO value below 0.5.
+#CSH is worrisome, KMO value below 0.5 sometimes
 det(eftaskscor)
 #using PCA
 model <- principal(eftasks, nfactors=5, rotate="none")
