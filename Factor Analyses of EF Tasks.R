@@ -35,7 +35,7 @@ efcols3=c("cpt_tp_ct_pretx",
 efcolsall=c("cpt_tp_ct_pretx", "cpt_dprime_pretx", 
             "csh_cost_md_pretx", "sst_ssrt_pretx",
             "str_stroop_md_pretx", "vnb_tp_md_slope", "vnb_tp_ct_all_pretx")
-eftasks <- select(prebeh, one_of(efcols3))
+eftasks <- select(prebeh, one_of(columns))
 eftaskscor <- cor(eftasks)
 cor.test(eftasks$sst_ssrt_pretx, eftasks$str_stroop_md_pretx)
 View(round(eftaskscor, 2))
@@ -96,9 +96,9 @@ model
 #scree plot
 plot(model$values, type="b")
 #by Kaiser's criterion decide how many factors to extract
-model1 <- principal(eftasks, nfactors=2, rotate= "none")
+model1 <- principal(eftasks, nfactors=3, rotate= "none")
 model1
-model2 <- principal(eftasks, nfactors=2, rotate="oblimin")
+model2 <- principal(eftasks, nfactors=3, rotate="oblimin")
 model2
 #print readable output
 print.psych(model2, cut=0.3, sort=TRUE)

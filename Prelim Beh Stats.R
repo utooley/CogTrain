@@ -17,7 +17,7 @@ columns=c("DMP_ID", "sex", "age", "race", "race_oth", "ethnicity",
          "bmi25", "cpt_tp_ct_pretx",  "cpt_dprime_pretx", 
          "csh_cost_md_pretx", "sst_ssrt_pretx",
          "str_stroop_md_pretx", "vnb_tp_ct_all_pretx",
-         "vnb_tp_ct_slope", "vnb_tp_md_slope")
+         "vnb_tp_ct_slope", "vnb_tp_md_slope", "vnb_tp_ct_3_pretx")
 prebeh <- prebeh %>% select(one_of(columns))
 
 #remove cognitive outliers
@@ -26,8 +26,9 @@ prebeh <- prebeh %>% filter(cog_outlier_pretx==0)
 prebeh$income <- factor(prebeh$income, levels=c("<$20,000", "$20,000-35,000", "$35,001-50,000", "$50,001-75,000", ">$75,000"))
 prebeh$edu <- factor(prebeh$edu, levels=c("Grade school", "Some high school", "HS grad or GED", 
                                              "Some coll or technical school", "College grad or beyond"))
-summary(prebeh)
+describe(prebeh)
 plot(prebeh$income)
+eftasks<-cor(prebeh)
 
 #convert factor variables to numeric
 hist(prebeh$income, breaks = 6)
