@@ -3,7 +3,7 @@ library(dplyr)
 #import behavioral data
 
 getwd()
-prebeh <- read.csv("DMP_pretx_demo_tasks_withnewvars_12.15.15.csv", sep = ",", header = TRUE)
+prebeh <- read.csv("DMP_pretx_demo_tasks_allnewvars_dprimes_100616.csv"", sep = ",", header = TRUE)
 describe(prebeh)
 glimpse(prebeh)
 str(prebeh)
