@@ -3,7 +3,7 @@ library(dplyr)
 #import behavioral data
 
 getwd()
-prebeh <- read.csv("DMP_pretx_demo_tasks_allnewvars_dprimes_100616.csv"", sep = ",", header = TRUE)
+prebeh <- read.csv("DMP_pretx_demo_tasks_allnewvars_dprimes_100616.csv", sep = ",", header = TRUE)
 describe(prebeh)
 glimpse(prebeh)
 str(prebeh)
@@ -34,10 +34,17 @@ efcols3=c("cpt_tp_ct_pretx",
           "str_stroop_md_pretx", "vnb_tp_md_slope")
 efcolsall=c("cpt_tp_ct_pretx", "cpt_dprime_pretx", 
             "csh_cost_md_pretx", "sst_ssrt_pretx",
-            "str_stroop_md_pretx", "vnb_tp_md_slope", "vnb_tp_ct_all_pretx")
-eftasks <- select(prebeh, one_of(columns))
+            "str_stroop_md_pretx", "vnb_dprime_pretx", "vnb_tp_ct_all_pretx")
+efcolsdprimes=c("DMP_ID","cpt_dprime_pretx", "csh_cost_md_pretx", "sst_ssrt_pretx",
+                "str_stroop_md_pretx", "vnb_dprime_pretx")
+eftasks <- select(prebeh, one_of(efcolsdprimes))
 eftaskscor <- cor(eftasks)
-cor.test(eftasks$sst_ssrt_pretx, eftasks$str_stroop_md_pretx)
+
+#look at whether dprimes significantly correlate with other variables (not CSH)
+cor.test(eftasks$sst_ssrt_pretx, eftasks$vnb_dprime_pretx)
+cor.test(eftasks$str_stroop_md_pretx, eftasks$vnb_dprime_pretx)
+cor.test(eftasks$sst_ssrt_pretx, eftasks$cpt_dprime_pretx)
+cor.test(eftasks$str_stroop_md_pretx, eftasks$cpt_dprime_pretx)
 View(round(eftaskscor, 2))
 
 #determining number of components to extract
@@ -96,9 +103,24 @@ model
 #scree plot
 plot(model$values, type="b")
 #by Kaiser's criterion decide how many factors to extract
-model1 <- principal(eftasks, nfactors=3, rotate= "none")
+model1 <- principal(eftasks, nfactors=2, rotate= "none")
 model1
-model2 <- principal(eftasks, nfactors=3, rotate="oblimin")
+model2 <- principal(eftasks, nfactors=2, rotate="oblimin")
 model2
 #print readable output
 print.psych(model2, cut=0.3, sort=TRUE)
+
+
+# Create a Composite EF Score and Residual CSH Switching Instead o --------
+
+#z-score each EF task
+efzscores <- eftasks %>%  mutate_each(., funs(zscore=scale(.)), -DMP_ID) 
+head(efzscores)
+
+#take average of the z-scores for 5 tasks
+efzscores$composite <- efzscores %>% select(, contains("zscore")) %>% 
+  
+mutate(efzscores, composite=(sum(select(efzscores,contains("zscore"))))/5)
+efzscores$composite=sum(select(efzscores, contains("zscore")))
+
+sum(select(efzscores, contains("zscore")))
