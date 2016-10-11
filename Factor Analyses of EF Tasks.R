@@ -1,5 +1,6 @@
 library(psych)
 library(dplyr)
+library(lattice)
 #import behavioral data
 
 getwd()
@@ -46,6 +47,9 @@ cor.test(eftasks$str_stroop_md_pretx, eftasks$vnb_dprime_pretx)
 cor.test(eftasks$sst_ssrt_pretx, eftasks$cpt_dprime_pretx)
 cor.test(eftasks$str_stroop_md_pretx, eftasks$cpt_dprime_pretx)
 View(round(eftaskscor, 2))
+
+
+# Factor Analysis ---------------------------------------------------------
 
 #determining number of components to extract
 library(nFactors)
@@ -118,9 +122,31 @@ efzscores <- eftasks %>%  mutate_each(., funs(zscore=scale(.)), -DMP_ID)
 head(efzscores)
 
 #take average of the z-scores for 5 tasks
-efzscores$composite <- efzscores %>% select(, contains("zscore")) %>% 
-  
-mutate(efzscores, composite=(sum(select(efzscores,contains("zscore"))))/5)
-efzscores$composite=sum(select(efzscores, contains("zscore")))
+efzscores$composite <- rowMeans(select(efzscores, contains("zscore")))
+describe(efzscores$composite)
 
-sum(select(efzscores, contains("zscore")))
+#Shapiro-Wilks test for normality
+shapiro.test(efzscores$composite)
+
+#get residual variance in CSH median cost after regressing out this composite
+switchmodel <- lm(csh_cost_md_pretx_zscore~composite, data=efzscores)
+summary(switchmodel)
+efzscores$csh_residual_variance <- resid(switchmodel)
+
+#plot to check that residuals were still in the right order as the data frame
+plot(predict(switchmodel)+resid(switchmodel)~csh_cost_md_pretx_zscore, data=efzscores)
+
+describe(efzscores$csh_residual_variance)
+
+#Shapiro-Wilks test for normality
+shapiro.test(efzscores$csh_residual_variance)
+
+ofinterest <- data.frame(select(efzscores, DMP_ID, composite, csh_residual_variance))
+
+#Write these back to a data file to use
+write.csv(efzscores, "DMP_pretx_tasks_EFzscores_101116.csv", na="")
+write.csv(ofinterest, "DMP_pretx_tasks_commonswitchonly_101116.csv", na="")
+
+#look at correlations between csh residuals and other EF tasks
+efcor <- cor(select(efzscores, -DMP_ID), use ="pairwise.complete.obs")
+View(round(efcor,2))
