@@ -4,6 +4,7 @@ library(lattice)
 #import behavioral data
 
 getwd()
+setwd("/Users/utooley/Documents/Kable Lab/Data/CogTrain/Non-Active/")
 prebeh <- read.csv("DMP_pretx_demo_tasks_allnewvars_dprimes_100616.csv", sep = ",", header = TRUE)
 describe(prebeh)
 glimpse(prebeh)
@@ -141,9 +142,20 @@ describe(efzscores$csh_residual_variance)
 #Shapiro-Wilks test for normality
 shapiro.test(efzscores$csh_residual_variance)
 
-ofinterest <- data.frame(select(efzscores, DMP_ID, composite, csh_residual_variance))
+#get residual variance in VNB-dprime (updating) after regressing out this composite
+switchmodel1 <- lm(vnb_dprime_pretx_zscore~composite, data=efzscores)
+summary(switchmodel1)
+efzscores$vnb_residual_variance <- resid(switchmodel1)
+
+describe(efzscores$vnb_residual_variance)
+
+#Shapiro-Wilks test for normality
+shapiro.test(efzscores$vnb_residual_variance)
+
+ofinterest <- data.frame(select(efzscores, DMP_ID, composite, csh_residual_variance, vnb_residual_variance))
 
 #Write these back to a data file to use
+setwd("/Users/utooley/Documents/Kable Lab/Data/CogTrain")
 write.csv(efzscores, "DMP_pretx_tasks_EFzscores_101116.csv", na="")
 write.csv(ofinterest, "DMP_pretx_tasks_commonswitchonly_101116.csv", na="")
 
