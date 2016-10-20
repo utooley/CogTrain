@@ -1,5 +1,5 @@
 voxsiz = [4 4 4]; % new voxel size {mm}
-V = spm_select([1 Inf],'Image');
+V = spm_select([1 Inf],'Filtered_4DVolume.nii');
 V = spm_vol(V);
 for i=1:numel(V)
    bb        = spm_get_bbox(V(i));
