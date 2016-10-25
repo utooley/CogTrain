@@ -35,7 +35,21 @@ infuncs1="/Users/utooley/Documents/test/functional_images_list.txt"
 automask1=TRUE
 brainmask1="/Users/utooley/Documents/test/GreyMask_v2_4mm.nii"
 bg= "/Users/utooley/Documents/test/single_subj_T1.nii"
-memlimit = c(30)
+memlimit = c(20)
 outdir ="/Users/utooley/Documents/tes1t"
 
 source("connectir_subdist_worker.R")
+
+
+##FOR WORKING ON KABLE LAB COMPUTER
+Rscript /Library/Frameworks/R.framework/Versions/3.3/Resources/library/connectir/scripts/connectir_subdist.R -i /Users/josephkable/Desktop/Ursula/test/functional_images_list.txt --automask1 --brainmask1 /Users/josephkable/Desktop/Ursula/test/GreyMask_v2_4mm.nii --bg /Users/josephkable/Desktop/Ursula/test/single_subj_T1.nii --memlimit 20 /Users/josephkable/Desktop/Ursula/test/try
+
+
+/Library/Frameworks/R.framework/Versions/3.3/Resources/library/connectir/scripts
+
+connectir_subdist.R \
+-i functional_images_list.txt \
+--brainmask1 GreyMask_v2_4mm.nii \
+--bg single_subj_T1.nii \
+--memlimit 20 \
+/Users/josephkable/Desktop/Ursula/test/try
