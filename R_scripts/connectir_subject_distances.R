@@ -1,6 +1,6 @@
 library(connectir)
 
-connectir_subdist.R
+connectir_subdist.R \
 -i functional_images_list.txt \
 --automask1 \
 --brainmask1 GreyMask_v2_4mm.nii \
@@ -49,7 +49,26 @@ Rscript /Library/Frameworks/R.framework/Versions/3.3/Resources/library/connectir
 
 connectir_subdist.R \
 -i functional_images_list.txt \
+--automask1 \
 --brainmask1 GreyMask_v2_4mm.nii \
 --bg single_subj_T1.nii \
 --memlimit 20 \
 /Users/josephkable/Desktop/Ursula/test/try
+
+##Trying to put in command line arguments and then run in R
+infuncs1="/Users/josephkable/Desktop/Ursula/test/functional_images_list.txt"
+automask1=TRUE
+brainmask1="/Users/osephkable/Desktop/Ursula/test/GreyMask_v2_4mm.nii"
+bg= "/Users/uosephkable/Desktop/Ursula/test/single_subj_T1.nii"
+memlimit = c(20)
+outdir ="/Users/utooley/Documents/tes1t"
+source("/Users/josephkable/Desktop/Ursula/connectir-master/inst/scripts/connectir_subdist_worker.R")
+
+##TROUBLESHOOTING write.nifti
+
+library(niftir)
+brainmask1="/Users/josephkable/Desktop/Ursula/test/GreyMask_v2_4mm.nii"
+mask <- read.nifti(brainmask1)
+hdr <- read.nifti.header(brainmask1)
+write.nifti(mask,hdr, outfile='tmp.nii', odt="char")
+file.remove(tmp.nii)
