@@ -3,6 +3,7 @@ library(dplyr)
 #import behavioral data
 
 getwd()
+setwd("/Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/Non-Active")
 prebeh <- read.csv("DMP_pretx_demo_tasks_allnewvars_dprimes_100616.csv", sep = ",", header = TRUE)
 describe(prebeh)
 glimpse(prebeh)
