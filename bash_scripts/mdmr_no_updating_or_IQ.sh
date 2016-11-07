@@ -1,5 +1,5 @@
 cd /Users/utooley/Documents/Kable_Lab/CogTrain/CWAS
- ./connectir_mdmr.R -i subj_dist_with_zscore \
+Rscript ./connectir_mdmr.R -i subj_dist_with_zscore \
     --formula "age + sex + mean.FD + composite + csh_residual_variance" \
     --model demo_and_EF_MDMR_regressors_110416.csv \
     --factors2perm "composite, csh_residual_variance" \
