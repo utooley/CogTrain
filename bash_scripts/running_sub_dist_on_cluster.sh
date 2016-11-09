@@ -2,6 +2,7 @@
 cd /data/jet/kable/Ursula
 Rscript /home/utooley/connectir-master/inst/scripts/connectir_subdist.R \
 -i functional_images_list_wo_outliers.txt \
+#--method euclidean \
 --automask1 \
 --memlimit 40 -c 4 \
 --ztransform \
