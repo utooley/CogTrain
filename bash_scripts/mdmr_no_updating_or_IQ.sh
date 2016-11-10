@@ -22,3 +22,15 @@ Rscript /home/utooley/connectir-master/inst/scripts/connectir_mdmr.R -i sub_dist
     --save-perms \
     --ignoreprocerror \
 mdmr_age+sex+mean.FD+composite+switch_4sub.mdmr
+
+##locally with all subjects this worked!
+cd /Users/utooley/Documents/Kable_Lab/CogTrain/CWAS
+Rscript /Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/R_scripts/connectir-master/inst/scripts/connectir_mdmr.R -i subj_dist_no_zscore_corrs \
+    --formula "composite + meanFD + age + sex" \
+    --model only_necessary_regressors_111016.csv \
+    --factors2perm composite \
+    --permutations 14999 \
+    --memlimit 40 \
+    --save-perms \
+    --ignoreprocerror \
+mdmr_age+sex+mean.FD+composite+switch_4sub.mdmr
