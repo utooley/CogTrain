@@ -34,3 +34,15 @@ Rscript /Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/R_scripts/connectir
     --save-perms \
     --ignoreprocerror \
 mdmr_age+sex+mean.FD+composite+switch_4sub.mdmr
+
+##run locally with 4 subjects no underscores in model file
+cd /Users/utooley/Documents/test1
+Rscript /Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/R_scripts/connectir-master/inst/scripts/connectir_mdmr.R -i test1 \
+    --formula "composite + mean.FD + age + sex" \
+    --model demo_and_EF_MDMR_regressors_110416_4sub.csv \
+    --factors2perm composite \
+    --permutations 14999 \
+    --memlimit 40 \
+    --save-perms \
+    --ignoreprocerror \
+mdmr_age+sex+mean.FD+composite+switch_4sub.mdmr
