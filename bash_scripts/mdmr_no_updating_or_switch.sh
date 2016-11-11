@@ -35,6 +35,7 @@ Rscript /Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/R_scripts/connectir
     --ignoreprocerror \
 mdmr_age+sex+mean.FD+composite+switch_4sub.mdmr
 
+<<<<<<< HEAD:bash_scripts/mdmr_no_updating_or_IQ.sh
 ##run locally with 4 subjects no underscores in model file
 cd /Users/utooley/Documents/test1
 Rscript /Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/R_scripts/connectir-master/inst/scripts/connectir_mdmr.R -i test1 \
@@ -46,3 +47,17 @@ Rscript /Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/R_scripts/connectir
     --save-perms \
     --ignoreprocerror \
 mdmr_age+sex+mean.FD+composite+switch_4sub.mdmr
+=======
+##try interactively on cluster
+cd /data/jet/kable/Ursula/
+Rscript /home/utooley/connectir-master/inst/scripts/connectir_mdmr.R -i sub_dist_with_zscored \
+    --formula "composite + meanFD + age + sex" \
+    --model only_necessary_regressors_agesexFDcog_111016.csv \
+    --factors2perm composite \
+    --permutations 14999 \
+    --forks 4 \
+    --memlimit 40 \
+    --save-perms \
+    --ignoreprocerror \
+age+sex+meanFD+composite.mdmr
+>>>>>>> 58c90fd66d63f6829a301a547927aad317fb3ada:bash_scripts/mdmr_no_updating_or_switch.sh
