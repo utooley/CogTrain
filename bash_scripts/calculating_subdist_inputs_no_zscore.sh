@@ -6,5 +6,5 @@ cd /Users/utooley/Documents/Kable_Lab/CogTrain/CWAS
 -i functional_images_list_wo_outliers.txt \
 --automask1 \
 --brainmask1 GreyMask_v2_4mm.nii \
---bg single_subj_T1.nii \ 
+--bg rsingle_subj_T1.nii \ 
 --memlimit 35 \ sub_dist_with_zscored
