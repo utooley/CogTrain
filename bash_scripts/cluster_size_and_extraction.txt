@@ -29,9 +29,20 @@ cluster -i age+sex+meanFD+composite+update+switch.mdmr/zstats_composite.nii -t 1
 -o age+sex+meanFD+composite+update+switch.mdmr/cluster_correction_output/cluster_indexe_greym_composite_covaried > age+sex+meanFD+composite+update+switch.mdmr/cluster_correction_output/clusters_composite_covaried_grey_mask.txt
 
 
-##FOR MDMR permuting switch and updating residuals
-cluster -i age+sex+meanFD+composite+update+switch.mdmr/zstats_composite.nii -t 1.65 \
+##FOR MDMR permuting switch and updating residuals--switch residual
+cluster -i age+sex+meanFD+composite+update+switch_allpermuted.mdmr/zstats_cshresidualvariance.nii -t 1.65 \
 -p 0.05 --dlh=0.528251 \
 --volume=20169 --minclustersize \
--o age+sex+meanFD+composite+update+switch.mdmr/cluster_correction_output/cluster_indexe_greym_composite_covaried > clusters_composite_covaried_grey_mask.txt
+-o age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/cluster_index_greym_switching_covaried > age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/clusters_switching_covaried_grey_mask.txt
 
+##FOR MDMR permuting switch and updating residuals--updating residual
+cluster -i age+sex+meanFD+composite+update+switch_allpermuted.mdmr/zstats_vnbresidualvariance.nii -t 1.65 \
+-p 0.05 --dlh=0.528251 \
+--volume=20169 --minclustersize \
+-o age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/cluster_index_greym_updating_covaried > age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/clusters_updating_covaried_grey_mask.txt
+
+##FOR MDMR permuting switch and updating residuals--COMPOSITE RESIDUAL CHECK THESE AGAINST ORIGINAL COMPOSITE CLUSTER CORRECTION
+cluster -i age+sex+meanFD+composite+update+switch_allpermuted.mdmr/zstats_vnbresidualvariance.nii -t 1.65 \
+-p 0.05 --dlh=0.528251 \
+--volume=20169 --minclustersize \
+-o age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/cluster_index_greym_composite_covaried > age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/clusters_composite_covaried_grey_mask.txt
