@@ -1,5 +1,5 @@
 voxsiz = [4 4 4]; % new voxel size {mm}
-V = spm_select([1 Inf],'gray_matter_mask.nii');
+V = spm_select([1 Inf],'single_subj_T1.nii');
 V = spm_vol(V);
 for i=1:numel(V)
    bb        = spm_get_bbox(V(i));

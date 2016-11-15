@@ -2,10 +2,10 @@ cd /data/jet/kable/Ursula/
 Rscript /home/utooley/connectir-master/inst/scripts/connectir_mdmr.R -i sub_dist_with_zscored \
     --formula "composite + cshresidualvariance + vnbresidualvariance + meanFD + age + sex" \
     --model regressors_agesexFD_cogupdateswitch_111016.csv \
-    --factors2perm composite \
+    --factors2perm "composite, cshresidualvariance,vnbresidualvariance" \
     --permutations 14999 \
     --forks 5 \
     --memlimit 30 \
     --save-perms \
     --ignoreprocerror \
-age+sex+meanFD+composite+update+switch.mdmr
+age+sex+meanFD+composite+update+switch_allpermuted2.mdmr
