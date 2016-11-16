@@ -1,5 +1,5 @@
 ##Calculating dlh and smoothness with FSL
-smoothest --zstat=sub_dist_with_zscored_4mmbg/age+sex+meanFD+composite+update+switch.mdmr/zstats_composite.nii --mask=GreyMask_v2_4mm.nii 
+smoothest --zstat=sub_dist_with_zscored_4mmbg/age+sex+meanFD+composite+update+switch_allpermuted.mdmr/zstats_cshresidualvariance.nii --mask=GreyMask_v2_4mm.nii 
 
 ##old AFNI should be performing one-sided testing, so pthreshold=0.05 is same as thresholding at z=1.64
 3dClustSim -mask mask.nii -fwhmxyz 8.37794 8.04997 8.68879 -pthr 0.05 -athr .05 .01 \
@@ -45,7 +45,7 @@ cluster -i age+sex+meanFD+composite+update+switch_allpermuted.mdmr/zstats_vnbres
 -o age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/cluster_index_greym_updating_covaried > age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/clusters_updating_covaried_grey_mask.txt
 
 ##FOR MDMR permuting switch and updating residuals--COMPOSITE RESIDUAL CHECK THESE AGAINST ORIGINAL COMPOSITE CLUSTER CORRECTION
-cluster -i age+sex+meanFD+composite+update+switch_allpermuted.mdmr/zstats_vnbresidualvariance.nii -t 1.65 \
+cluster -i age+sex+meanFD+composite+update+switch_allpermuted.mdmr/zstats_composite.nii -t 1.65 \
 -p 0.05 --dlh=0.528251 \
 --volume=20169 --minclustersize \
 -o age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/cluster_index_greym_composite_covaried > age+sex+meanFD+composite+update+switch_allpermuted.mdmr/cluster_correction_output/clusters_composite_covaried_grey_mask.txt
