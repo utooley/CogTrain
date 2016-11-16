@@ -1,3 +1,6 @@
+##Calculating dlh and smoothness with FSL
+smoothest --zstat=sub_dist_with_zscored_4mmbg/age+sex+meanFD+composite+update+switch.mdmr/zstats_composite.nii --mask=GreyMask_v2_4mm.nii 
+
 ##old AFNI should be performing one-sided testing, so pthreshold=0.05 is same as thresholding at z=1.64
 3dClustSim -mask mask.nii -fwhmxyz 8.37794 8.04997 8.68879 -pthr 0.05 -athr .05 .01 \
 -iter 10000 -nodec -NN 123 -prefix cluster_size_needed
