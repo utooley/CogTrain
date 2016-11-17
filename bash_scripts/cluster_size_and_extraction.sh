@@ -12,7 +12,8 @@ smoothest --zstat=sub_dist_with_zscored_4mmbg/age+sex+meanFD+composite+update+sw
 cluster -i age+sex+meanFD+composite.mdmr/zstats_composite.nii -t 1.65 \
 -p 0.05 --dlh=0.528251 \
 --volume=20169 --minclustersize \
--o age+sex+meanFD+composite.mdmr/cluster_correction_output/cluster_indexes_greym_composite_only > age+sex+meanFD+composite.mdmr/cluster_correction_output/clusters_composite_grey_mask.txt
+-o age+sex+meanFD+composite.mdmr/cluster_correction_output/cluster_indexes_greym_composite_only \
+-othresh=age+sex+meanFD+composite.mdmr/cluster_correction_output/cluster_thresholded_greym_composite_only > age+sex+meanFD+composite.mdmr/cluster_correction_output/clusters_composite_grey_mask_minima.txt
 
 ##do the same thing with cluster in FSL, add min of 20 mm between maxima/minima as in Shehzad
 ##pull out clusters with (d from grey mask only)
@@ -20,6 +21,7 @@ cluster -i age+sex+meanFD+composite.mdmr/zstats_composite.nii -t 1.65 \
 -p 0.05 --dlh=0.528251 \
 --volume=20169 --minclustersize --peakdist=20 \
 -o age+sex+meanFD+composite.mdmr/cluster_correction_output/cluster_indexes_greym_composite_20mindist > age+sex+meanFD+composite.mdmr/cluster_correction_output/clusters_composite_grey_mask_20mindist.txt
+
 
 
 ##LOOP THROUGH T AND P VALUES OF CLUSTER CORRECTION TO LOOK AT ROBUSTNESS OF RESULTS
