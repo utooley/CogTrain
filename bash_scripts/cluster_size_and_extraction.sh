@@ -17,6 +17,7 @@ cluster -i age+sex+meanFD+composite.mdmr/zstats_composite.nii -t 1.65 \
 
 ##do the same thing with cluster in FSL, add min of 20 mm between maxima/minima as in Shehzad
 ##pull out clusters with (d from grey mask only)
+#doesn't make a difference
 cluster -i age+sex+meanFD+composite.mdmr/zstats_composite.nii -t 1.65 \
 -p 0.05 --dlh=0.528251 \
 --volume=20169 --minclustersize --peakdist=20 \
@@ -87,6 +88,9 @@ echo ${output}
 done;
 done
 #done
+
+
+
 ##OLD##
 ##DLH VALUES NOT CORRECTED FOR EACH Z-STAT IMAGE
 
