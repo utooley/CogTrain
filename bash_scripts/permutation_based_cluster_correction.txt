@@ -1,0 +1,8 @@
+cd /home/utooley/connectir-master/permutation/
+Rscript ~/connectir-master/permutation/le_correcter.R /data/jet/kable/Ursula/sub_dist_with_zscored_4mmbg /data/jet/kable/Ursula/sub_dist_with_zscored_4mmbg/age+sex+meanFD+composite.mdmr
+
+cd /home/utooley/connectir-master/permutation/
+Rscript ~/connectir-master/permutation/le_correcter.R /data/jet/kable/Ursula/sub_dist_with_zscored_4mmbg /data/jet/kable/Ursula/sub_dist_with_zscored_4mmbg/age+sex+meanFD+composite+update+switch.mdmr
+
+cd /home/utooley/connectir-master/permutation/
+Rscript ~/connectir-master/permutation/le_correcter.R /data/jet/kable/Ursula/sub_dist_with_zscored_4mmbg /data/jet/kable/Ursula/sub_dist_with_zscored_4mmbg/age+sex+meanFD+composite+update+switch_allpermuted.mdmr
