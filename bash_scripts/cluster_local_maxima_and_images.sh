@@ -11,3 +11,9 @@ cluster -i age+sex+meanFD+composite.mdmr/zstats_composite.nii -t 1.65 \
 --omax=age+sex+meanFD+composite.mdmr/cluster_correction_output/t1.65_p0.05/cluster_max_composite_only \
 --omean=age+sex+meanFD+composite.mdmr/cluster_correction_output/t1.65_p0.05/cluster_mean_composite_only \
 > age+sex+meanFD+composite.mdmr/cluster_correction_output/clusters_list_composite_only.txt
+
+
+##pulling out clusters from permutation-corrected maps
+cluster -i clust_logp_composite.nii -t 1 --mm --olmax=extracting_peaks/clust_maxima_logp_sepdist20_mm.txt --peakdist=20
+
+cluster -i clust_logp_composite.nii -t 1.3 -n 20 --olmax=extracting_peaks/clust_maxima_logp_sepdist20_mm.txt --peakdist=20
