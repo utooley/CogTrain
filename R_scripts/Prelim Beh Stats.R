@@ -36,7 +36,7 @@ eftasks<-cor(prebeh)
 hist(prebeh$income, breaks = 6)
 #look at whether IQ varies by income, have to transform to numeric first
 prebeh$income <- as.numeric(prebeh$income)
-test <- lm(sst_ssrt_pretx~income, prebeh)
+test <- lm(shipley~income, prebeh)
 summary(test)
 
 

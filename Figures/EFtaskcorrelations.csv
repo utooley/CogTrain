@@ -1,0 +1,6 @@
+"","cpt_dprime_pretx","csh_cost_md_pretx","sst_ssrt_pretx","str_stroop_md_pretx","vnb_dprime_pretx"
+"cpt_dprime_pretx",1,-0.05,0.27,0.17,0.34
+"csh_cost_md_pretx",-0.05,1,0.11,0,0.06
+"sst_ssrt_pretx",0.27,0.11,1,0.16,0.16
+"str_stroop_md_pretx",0.17,0,0.16,1,0.21
+"vnb_dprime_pretx",0.34,0.06,0.16,0.21,1

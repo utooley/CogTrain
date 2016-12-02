@@ -48,6 +48,7 @@ cor.test(eftasks$str_stroop_md_pretx, eftasks$vnb_dprime_pretx)
 cor.test(eftasks$sst_ssrt_pretx, eftasks$cpt_dprime_pretx)
 cor.test(eftasks$str_stroop_md_pretx, eftasks$cpt_dprime_pretx)
 View(round(eftaskscor, 2))
+write.csv(round(eftaskscor,2), file="EFtaskcorrelations.csv")
 
 
 # Factor Analysis ---------------------------------------------------------
