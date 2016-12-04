@@ -71,6 +71,8 @@ plot(load,type="n") # set up plot
 text(load,labels=names(eftasks),cex=.7) # add variable names
 
 #EFA using minimum residual (can also change to do principal axes)
+install.packages("GPArotation")
+library(GPArotation)
 fit <- fa(eftasks, nfactors=2, rotate = "oblimin", fm = "minres")
 print(fit, digits = 2)
 
@@ -113,6 +115,7 @@ model1 <- principal(eftasks, nfactors=2, rotate= "none")
 model1
 model2 <- principal(eftasks, nfactors=2, rotate="oblimin")
 model2
+write.csv(print.psych(model2, sort=TRUE), file="obliminPCAfactorloadings.csv")
 #print readable output
 print.psych(model2, cut=0.3, sort=TRUE)
 
