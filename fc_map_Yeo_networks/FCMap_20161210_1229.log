@@ -1,0 +1,250 @@
+REST Version:1.8, Release 20130615
+-------------------------------------------------------------------------------
+
+Functional Connectivity computation log 20161210_1229
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
+Remove Linear Trend options:
+	remove linear trend BEFORE filter: No
+
+
+-------------------------------------------------------------------------------
+Ideal Band Pass filter options:
+	Use Filter: No
+	Band Low: 0.01
+	Band High: 0.08
+	Sample Period(i.e. TR): 2
+
+
+-------------------------------------------------------------------------------
+Functional Connectivity input parameters:
+	Input Data Directories( ): 
+	-------------------------------------------------------------------------------
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0005
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0011
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0018
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0019
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0034
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0036
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0048
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0060
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0062
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0063
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0090
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0095
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0097
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0098
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0106
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0109
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0110
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0115
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0118
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0148
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0153
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0154
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0157
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0169
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0171
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0183
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0188
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0199
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0200
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0202
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0217
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0219
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0224
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0229
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0259
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0269
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0273
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0290
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0295
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0301
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0305
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0313
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0350
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0356
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0357
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0389
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0414
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0418
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0423
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0445
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0492
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0498
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0502
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0509
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0510
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0523
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0528
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0556
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0558
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0559
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0574
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0587
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0596
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0598
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0614
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0628
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0649
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0660
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0678
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0679
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0700
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0701
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0715
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0730
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0755
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0759
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0772
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0773
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0775
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0793
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0795
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0800
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0801
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0808
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0813
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0821
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0844
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0847
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0848
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0859
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0870
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0877
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0889
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0897
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0913
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0928
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0929
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0937
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0939
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0954
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0969
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0971
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0975
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0978
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0982
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0985
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP0996
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1000
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1001
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1003
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1028
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1039
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1052
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1062
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1064
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1083
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1090
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1095
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1100
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1114
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1135
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1157
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1165
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1172
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1183
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1192
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1205
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1221
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1225
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1226
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1227
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1231
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1241
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1243
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1252
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1260
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1266
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1271
+	156# /Users/utooley/Documents/Kable_Lab/CogTrain/image_data/rfunc_ppc_ARCWSF_no_outliers/DMP1291
+	-------------------------------------------------------------------------------
+	Mask file: Default
+
+
+	Functional Connectivity Parameters
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net02_2mm_img_1/volume_net02_1cluster.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net03_2mm_img_4/volume_net03_01_L_DPFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net03_2mm_img_4/volume_net03_02_R_DLPFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net03_2mm_img_4/volume_net03_03_L_PC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net03_2mm_img_4/volume_net03_04_R_PC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_01_L_DPFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_02_L_INS.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_03_L_AG.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_04_R_DPFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_05_R_INS.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_06_R_AG.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_07_ACC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_08_R_PreM_small.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net04_2mm_img_7or9/volume_net04_09_L_PreM_small.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_01_L_DPFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_02_L_IPC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_03_L_ITC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_04_L_IFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_05_L_FEF.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_06_R_DLPFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_07_R_INS.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_08_R_ITC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_09_R_IPC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_10_LR_ACC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net06_2mm_img_11/volume_net06_11_LR_Precun.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net07_2mm_img_8/volume_net07_01_LR_PCC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net07_2mm_img_8/volume_net07_02_LR_MPFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net07_2mm_img_8/volume_net07_03_L_HIP.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net07_2mm_img_8/volume_net07_04_L_ITC_AG.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net07_2mm_img_8/volume_net07_05_R_HIP.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net07_2mm_img_8/volume_net07_06_R_AG.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net07_2mm_img_8/volume_net07_07_R_IFC.nii
+	ROI Definition: 
+		/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/network_connectivity_wi_hoon_files/Yeo_ROIs/Yeo2011_resNN4mm/Yeo2011_resNN4mm_Volume_Temp/resNN4mm_Yeo_Volume_net07_2mm_img_8/volume_net07_08_R_TP.nii
+	Covariables Definition File: 
+		
+	Covariables Polort (Polynomial Orthogonal Degree): 
+		0
+
+
+-------------------------------------------------------------------------------
+Functional Connectivity output parameters:
+	Prefix to the Data directories: FCMap
+	Output Data Directories: /Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/fc_map_Yeo_networks
+	Want Fisher Z-score map transformation: Yes 
+
+
+-------------------------------------------------------------------------------
+
+Total elapsed time for Functional Connectivity Computing: 11.74  seconds
