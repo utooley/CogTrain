@@ -1,6 +1,8 @@
 library(dplyr)
+library(psych)
 #create dataframes
-setwd("/Users/utooley/Documents/Kable_Lab/CogTrain/CWAS/fc_map_Yeo_networks/")
+setwd("/Users/utooley/Documents/Kable_Lab/CogTrain/fc_map_Yeo_networks/")
+setwd("/Users/josephkable/Desktop/Ursula/Kable_Lab/CogTrain/fc_map_Yeo_networks/")
 within_network <- read.csv("mean_within_network_connectivity.csv")
 between_network <- read.csv("mean_between_network_connectivity.csv")
 within_network <- within_network[-c(140:141),]
