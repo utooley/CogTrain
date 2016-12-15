@@ -1,7 +1,7 @@
 library(dplyr)
 library(psych)
 #create dataframes
-setwd("/Users/utooley/Documents/Kable_Lab/CogTrain/fc_map_Yeo_networks/")
+setwd("/Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/fc_map_Yeo_networks/")
 setwd("/Users/josephkable/Desktop/Ursula/Kable_Lab/CogTrain/fc_map_Yeo_networks/")
 within_network <- read.csv("mean_within_network_connectivity.csv")
 between_network <- read.csv("mean_between_network_connectivity.csv")
@@ -29,6 +29,10 @@ cor.test(within_network$VA, within_network$composite)
 cor.test(within_network$FP, within_network$composite)
 cor.test(within_network$DMN, within_network$composite)
 
+cor.test(within_network$DA, within_network$cshresidualvariance)
+cor.test(within_network$DA, within_network$cshresidualvariance)
+cor.test(within_network$DA, within_network$cshresidualvariance)
+
 #between network
 cor.test(between_network$SM.DA, between_network$composite)
 cor.test(between_network$SM.VA, between_network$composite)
@@ -41,6 +45,12 @@ cor.test(between_network$VA.FP, between_network$composite)
 cor.test(between_network$VA.DMN, between_network$composite)
 cor.test(between_network$FP.DMN, between_network$composite)
 
+##to graph the two with a scatter plot, use below
+with(within_network, plot(composite~VA))
+with(between_network, plot(composite~VA.FP))
+
+#add linear model line
+abline(lm(between_network$composite~between_network$VA.FP))
 ##use linear model to control for covariates
 ##between network
 model <- lm(composite~DA.DMN+age+meanFD+sex+cshresidualvariance+vnbresidualvariance, data=between_network)

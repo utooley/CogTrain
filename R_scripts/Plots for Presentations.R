@@ -34,16 +34,16 @@ between_network <- between_network[-c(140:142),]
 #summarize
 summary <- describe(within_network)
 #plot
-within.network <- barplot(colMeans(within_network), main="Average Within Network Connectivity", 
-                          ylab = "Mean Connectivity", xlab = "Network", ylim = c(0, 0.6), col=brewer.pal(8, "Set3"))
+within.network <- barplot(colMeans(within_network), main="Average Intra-network Connectivity", 
+                          ylab = "Intra-network Connectivity (Z-transformed)", xlab = "Network", ylim = c(0, 0.6), col=brewer.pal(8, "Set3"))
 #add error bars
 arrows(x0=within.network,y0=colMeans(within_network)+summary$se,y1=colMeans(within_network)-summary$se,angle=90,code=3,length=0.1)
 
 ##make plots for between network connectivity##
 summary <- describe(between_network)
 #plot
-between.network <- barplot(colMeans(between_network), main="Average Between Network Connectivity", 
-                          ylab = "Mean Connectivity", las= 2, ylim= c(-0.2, 0.4), col=brewer.pal(8, "Set3"))
+between.network <- barplot(colMeans(between_network), main="Average Inter-network Connectivity", 
+                          ylab = "Inter-network Connectivity (Z-transformed)", las= 2, ylim= c(-0.2, 0.4), col=brewer.pal(8, "Set3"))
 #add error bars
 arrows(x0=between.network,y0=colMeans(between_network)+summary$se,y1=colMeans(between_network)-summary$se,angle=90,code=3,length=0.1)
 
