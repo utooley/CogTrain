@@ -9,6 +9,7 @@ within_network <- within_network[-c(140:141),]
 between_network <- between_network[-c(140:142),]
 
 cog <- read.csv("/Users/utooley/Documents/Kable_Lab/CogTrain/CogTrain/regressors_agesexFD_cogupdateswitch_111016.csv")
+cog <- read.csv("/Users/josephkable/Desktop/Ursula/Kable_Lab/CogTrain/regressors_agesexFD_cogupdateswitch_111016.csv")
 
 within_network <- data.frame(c(within_network,cog))
 between_network <- data.frame(c(between_network,cog))
